@@ -1,8 +1,6 @@
 package ru.netology;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.TreeMap;
+import java.util.*;
 
 public class PhoneBook {
     public  Map<String, String> phoneBook =new HashMap<>();
@@ -16,7 +14,12 @@ public class PhoneBook {
         }
     }
 public String findByNumber(String number){
-
+    Set<Map.Entry<String,String>> entrySet=phoneBook.entrySet();
+    for (Map.Entry<String,String> pair : entrySet) {
+        if (number.equals(pair.getValue())) {
+            return pair.getKey();// нашли наше значение и возвращаем  ключ
+        }
+    }
 return null;}
 
 
