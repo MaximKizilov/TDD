@@ -6,6 +6,7 @@ import org.mockito.Mockito;
 import static org.junit.jupiter.api.Assertions.*;
 
 class PhoneBookTest {
+    @Test
     void testadd(){
         PhoneBook phoneBook = new PhoneBook();
         phoneBook.add("Петя", " 8-914-177-46-05");

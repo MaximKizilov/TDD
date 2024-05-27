@@ -5,8 +5,15 @@ import java.util.Map;
 import java.util.TreeMap;
 
 public class PhoneBook {
+    public  Map<String, String> phoneBook =new HashMap<>();
+    int count = 0;
     public  void add(String key, String value){
-        return;
+        if (phoneBook.containsKey(key)) {
+            phoneBook.put(key,  value);
+        } else {
+            phoneBook.put(key, value);
+            count++;
+        }
     }
 
 
