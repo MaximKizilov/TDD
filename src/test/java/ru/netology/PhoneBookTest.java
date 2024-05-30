@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class PhoneBookTest {
     PhoneBook phoneBook = new PhoneBook();
     @Test
-    void testadd(){
+    void testAdd(){
 
         phoneBook.add("Петя", " 8-914-177-46-05");
         phoneBook.add("Петя", " 8-914-177-43-06");
@@ -18,11 +18,15 @@ class PhoneBookTest {
         assertEquals(phoneBook.count, 2);
     }
     @Test
-    void   findByNumber() {
+    void   testFindByNumber() {
         phoneBook.phoneBook.put("Петя", " 8-914-177-43-06");
         assertEquals(phoneBook.findByNumber(" 8-914-177-43-06"), "Петя");
     }
-
+    @Test
+    void testFindByName(){
+        phoneBook.phoneBook.put("Петя", " 8-914-177-43-06");
+        assertEquals(phoneBook.findByName("Петя"), " 8-914-177-43-06");
+    }
 
 
 }
