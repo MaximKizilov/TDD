@@ -24,4 +24,8 @@ return null;}
     String findByName(String s){
     return phoneBook.get(s);}
 
-}
+    public List<String> printAllNames() {
+
+        return null;
+    }
+    }
