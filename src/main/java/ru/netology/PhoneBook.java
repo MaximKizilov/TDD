@@ -26,6 +26,6 @@ return null;}
 
     public List<String> printAllNames() {
 
-        return null;
+        return new ArrayList<>(phoneBook.keySet().stream().sorted().toList());
     }
     }
